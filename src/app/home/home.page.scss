@@ -1,1 +1,12 @@
 
+.imgTreino{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4px;
+}
+
+img{
+    border-radius: 16px;
+}
