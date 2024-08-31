@@ -1,0 +1,49 @@
+
+<ion-content [fullscreen]="true">
+
+  <ng-container *ngFor="let pais of this.paises">
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-img src="{{pais.flags.svg}}"></ion-img>
+      </ion-col>
+      <ion-col size="8">
+        <h1>{{pais.name.common}}</h1>
+        <h1>{{pais.name.official}}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h2>{{pais.capital}}</h2>
+        <h2>{{pais.population}}</h2>
+        <h2>{{pais.area}}</h2>
+        <h2>{{pais.region}}</h2>
+        <h2>{{pais.subregion}}</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ng-container *ngFor="let fuzo of pais.timezones">
+        <h2>{{ fuzo }}</h2>
+      </ng-container>
+    </ion-row>
+
+    <ion-row>
+      <ng-container *ngIf="pais.independent">
+        <h1>{{pais.name.common}} é um país independente!</h1>
+      </ng-container>
+      <ng-container *ngIf="!pais.independent">
+        <h1>{{pais.name.common}} não é um país independente!</h1>
+      </ng-container>
+    </ion-row>
+
+    <h1>Conheça os países que fazem fronteira:</h1>
+    <ng-container *ngFor="let fronteira of pais.borders">
+        <ion-row>
+         <h1 (click)="verDetalhes(fronteira)">{{fronteira}}</h1>
+        </ion-row>
+      </ng-container>
+
+  </ng-container>
+</ion-content>
