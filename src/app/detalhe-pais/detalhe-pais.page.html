@@ -3,47 +3,71 @@
 
   <ng-container *ngFor="let pais of this.paises">
     
-    <ion-row>
+    <ion-row class="ion-margin-start">
       <ion-col size="3">
         <ion-img src="{{pais.flags.svg}}"></ion-img>
       </ion-col>
-      <ion-col size="8">
+      <ion-col size="8" class="ion-padding-start">
         <h1>{{pais.name.common}}</h1>
-        <h1>{{pais.name.official}}</h1>
+        <h2>{{pais.name.official}}</h2>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <h2>{{pais.capital}}</h2>
-        <h2>{{pais.population}}</h2>
-        <h2>{{pais.area}}</h2>
-        <h2>{{pais.region}}</h2>
-        <h2>{{pais.subregion}}</h2>
+        <ion-card>
+        <ion-item><h2>Capital: {{pais.capital}}</h2></ion-item>
+      <ion-item><h2>População: {{pais.population}}</h2></ion-item>
+      <ion-item><h2>Área do país: {{pais.area}}</h2></ion-item>
+      <ion-item><h2>Região: {{pais.region}}</h2></ion-item>
+      <ion-item><h2>Sub-região: {{pais.subregion}}</h2></ion-item>
+       </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ng-container *ngFor="let fuzo of pais.timezones">
-        <h2>{{ fuzo }}</h2>
-      </ng-container>
-    </ion-row>
 
-    <ion-row>
+<ion-row size="8">
+<ion-card>
+<ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Fuzo horário</ion-label>
+      </ion-item>
+      <ng-container *ngFor="let fuzo of pais.timezones">
+      <div class="ion-padding" slot="content">{{ fuzo }}</div>
+    </ng-container>
+    </ion-accordion>
+</ion-accordion-group>
+</ion-card>
+</ion-row>
+    
+
+    <ion-row class="ion-margin">
       <ng-container *ngIf="pais.independent">
-        <h1>{{pais.name.common}} é um país independente!</h1>
+        <ion-label  color="success"><h1>{{pais.name.common}} é um país independente!</h1></ion-label>
       </ng-container>
       <ng-container *ngIf="!pais.independent">
-        <h1>{{pais.name.common}} não é um país independente!</h1>
+        <ion-label  color="danger"><h1>{{pais.name.common}} não é um país independente!</h1></ion-label>
       </ng-container>
     </ion-row>
 
-    <h1>Conheça os países que fazem fronteira:</h1>
-    <ng-container *ngFor="let fronteira of pais.borders">
-        <ion-row>
-         <h1 (click)="verDetalhes(fronteira)">{{fronteira}}</h1>
-        </ion-row>
-      </ng-container>
+
+
+    <ion-row>
+      <ion-card>
+      <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label>Países que fazem fronteira:</ion-label>
+            </ion-item>
+            <ng-container *ngFor="let fronteira of pais.borders">
+            <div class="ion-padding" slot="content" (click)="verDetalhes(fronteira)">{{ fronteira }}</div>
+          </ng-container>
+          </ion-accordion>
+      </ion-accordion-group>
+      </ion-card>
+      </ion-row>
+
 
   </ng-container>
 </ion-content>
