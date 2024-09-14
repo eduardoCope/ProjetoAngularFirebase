@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { IncrementerModule } from '../shared/components/incrementer/incrementer.module';
+import { HeaderModule } from '../shared/components/header/header.module';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { IncrementerModule } from '../shared/components/incrementer/incrementer.
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    IncrementerModule
+    HeaderModule
   ],
   declarations: [HomePage]
 })

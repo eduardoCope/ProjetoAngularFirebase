@@ -1,14 +1,29 @@
 <ion-content [fullscreen]="true">
-<ion-row>
-  <ion-col size="3">
-    <app-incrementer></app-incrementer>
-  </ion-col>
-  <ion-col size="3">
-    <app-incrementer></app-incrementer>
-  </ion-col>
-  <ion-col size="3">
-    <app-incrementer></app-incrementer>
-  </ion-col>
-</ion-row>
+    <!-- Header -->
+    <app-header></app-header>
 
+    <!-- Banner -->
+    <ion-img class="banner" src="https://www.bizak.es/wp-content/uploads/2023/05/BANNER-65-POKEMON-1920X700-1170x427.jpg"></ion-img>
+
+    <!-- Galery -->
+     <ion-row>
+        <ion-col class="ion-text-center">
+            <ion-title><h1> Tipos de Pokemon </h1></ion-title> 
+        </ion-col>
+     </ion-row>
+     <ion-row>
+        <ng-container *ngFor="let elemento of this.tipo">
+        <ion-col size="3.8" class="ion-text-center">
+            <ion-card color="light">
+                <ion-card-header>
+                    <ion-card-title>{{elemento.nome}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content class="ion-margin">
+                    <ion-img class="galeryIMG" src="{{elemento.img}}"></ion-img>
+                    <ion-img class="galeryIMG" src="{{elemento.img2}}"></ion-img>
+                </ion-card-content>
+            </ion-card>             
+        </ion-col>
+    </ng-container>
+    </ion-row>
 </ion-content>
