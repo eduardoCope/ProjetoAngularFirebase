@@ -23,7 +23,7 @@ export class HomePage {
       nome: 'Grama',
       img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png',
       img2: 'https://blogger.googleusercontent.com/img/a/AVvXsEg-SuDuwvd-U1A_pyLBbHXrg_D2dV43tM9Q79MelKbB8KyGrbMSBCHBHbl7Zeho0n0pwkzL7VlDGh7KSMl-OZvxk_VOVblBmuhM4cp-bUeJF9vVLi44Y4CSW2evIaz3_57pIpySeWYwc0IWEsaHU4e9ioQHXz3RQRqidM0WUd5PwZbzD4D_UpZuxUsB=s967'
-    }
+    },
   ]
  
   constructor(){ }
