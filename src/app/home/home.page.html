@@ -3,17 +3,16 @@
     <app-header></app-header>
 
     <!-- Banner -->
-    <ion-img class="banner" src="https://www.bizak.es/wp-content/uploads/2023/05/BANNER-65-POKEMON-1920X700-1170x427.jpg"></ion-img>
-
+    <app-banner></app-banner>
     <!-- Galery -->
      <ion-row>
         <ion-col class="ion-text-center">
             <ion-title><h1> Tipos de Pokemon </h1></ion-title> 
         </ion-col>
      </ion-row>
-     <ion-row>
+     <ion-row class="ion-justify-content-center">
         <ng-container *ngFor="let elemento of this.tipo">
-        <ion-col size="3.8" class="ion-text-center">
+        <ion-col size="3" class="ion-text-center">
             <ion-card color="light">
                 <ion-card-header>
                     <ion-card-title>{{elemento.nome}}</ion-card-title>
