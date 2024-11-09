@@ -1,0 +1,39 @@
+.fundo{
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    outline: 1px solid #fff;
+    min-height: 80vh;
+}
+.fantasia{
+    background-image: url('https://i.pinimg.com/564x/6d/da/12/6dda1270051f0b33dfce488db14e4723.jpg');
+}
+.filme{
+    background-image: url('https://media.glamour.com/photos/5f6a5d72aa812660b7ea2f87/1:1/w_2219,h_2219,c_limit/MSDSCMO_EC029.jpg');
+}
+.doce{
+    background-image: url('https://img.freepik.com/premium-photo/sweet-chocolate-halloween-candies_866772-1538.jpg');
+}
+.decoracao{
+    background-image: url('https://i.pinimg.com/564x/f5/55/36/f555369cb76dec339ad6dabb01516d73.jpg');
+}
+h1{
+    font-size: 3.5rem;
+    font-family: cursive;
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+.crianca{
+    background-image: url('https://www.bhg.com/thmb/rtiZtcQDo4rDry3Vx9GRPDSzYmY=/1865x0/filters:no_upscale():strip_icc()/kids-trick-or-treat-buckets-7001cba91aa944ce8f22c9d16467970a.jpg');
+}
+p{
+    font-family:inherit;
+}
+.imgCard{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+

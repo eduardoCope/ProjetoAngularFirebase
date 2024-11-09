@@ -12,8 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'galeria',
-    loadChildren: () => import('./galeria/galeria.module').then( m => m.GaleriaPageModule)
+    path: 'halloween',
+    loadChildren: () => import('./halloween/halloween.module').then( m => m.HalloweenPageModule)
   }
 ];
 
